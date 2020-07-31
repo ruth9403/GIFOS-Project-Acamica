@@ -1,5 +1,12 @@
+@import 'partials/mixins.scss';
+@import 'partials/variables.scss';
+@import 'partials/header.scss';
+@import 'partials/categories.scss';
+
 body{
     padding: 0;
     margin: 0;
-    background-color: blueviolet;
+    background-color: #FFFFFF ;
 }
+
+//@include theme('light-theme')

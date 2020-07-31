@@ -1,0 +1,10 @@
+@mixin titles-all {
+    font-family: $font-family-title;
+    font-weight: bold;
+    color: $colorTitle;
+    text-align: center;
+}
+@mixin plain-text {
+    font-family:$font-family-text;
+    text-align: center;
+}

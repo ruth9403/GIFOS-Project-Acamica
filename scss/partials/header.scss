@@ -1,0 +1,274 @@
+/* hr -----------------------------------------------------------*/
+.header-hr{
+    margin: 0px;
+    height: 5px;
+    background-color: $colorTitle;//AQUIIIII
+}
+/* navigation -------------------------------------------------*/
+.nav {
+    font-size: small;
+    background-color: $colorBckgrd;//AQUIIIII
+    width: 100%;
+    min-height: 95px;
+    z-index: 3;
+    position: relative;
+    /* ul ------------------------------------------*/
+    & ul{
+        margin: 95px 0 0 0; 
+        padding-top: 17px;
+        padding-bottom: 100px;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+        background-color:$colorBckgrd-nav-menu;//AQUIIIII
+        position: absolute;
+        width: 100%;
+        height: 484px;
+        .btnDesk{
+            display: none;
+        }
+        /*each li with its a------------------------------------------*/
+        & li a {
+            display: block;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            font-family: $font-family-title;//AQUIIIII
+            font-weight: bold;
+            font-size: 15px;
+            color: $colorBckgrd;//AQUIIIII
+            text-decoration: none;
+            position: relative;
+            &::after{
+                position: absolute;
+                bottom: 8px;
+            }
+        }
+    }
+    /*logo container-------------------------------------*/
+    & .logo_nav{
+        display: block;
+        align-items: center;
+        float: left;
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        max-height: 95px;
+        /*logo-------------------------------------*/
+        & img{
+            width: 48.8px;
+            height: 48.8px;
+            margin: 29px 0 17.2px 22px;
+        }
+    }
+    & .menu{
+        clear: both;
+        max-height: 0;
+        transition: max-height .2s ease-out;
+    }
+    & .menu-icon{
+        cursor: pointer;
+        float: right;
+        position: relative;
+        user-select: none;
+        max-height: 95px;
+        & .nav-icon{
+            background: $colorTitle;//AQUIIIII
+            display: block;
+            height: 2px;
+            position: relative;
+            margin: 52px 26px;
+            transition: background .2s ease-out;
+            width: 15px;
+            &::before{
+                top: 5px;
+            }
+            &::after{
+                top: -5px;
+            }
+        }
+    }  
+}
+/* menu btn */
+.menu-btn{
+    display: none;
+}
+.nav .menu li a::after{
+    background: $colorBckgrdAfter;//AQUIIIII
+    opacity: 0.6;
+    content: '';
+    display: block;
+    height: 0.5px;
+    width: 11%;
+    left: 45%;
+}
+
+.nav .menu-icon .nav-icon:before,
+.nav .menu-icon .nav-icon:after {
+    background: $colorTitle;//AQUIIIII
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+/* menu btn */
+.nav .menu-btn:checked ~ .menu {
+    max-height: 484px;
+}
+
+.nav .menu-btn:checked ~ .menu-icon .nav-icon {
+    background: transparent;
+}
+
+.nav .menu-btn:checked ~ .menu-icon .nav-icon:before {
+    transform: rotate(-45deg);
+    top:0;
+}
+
+.nav .menu-btn:checked ~ .menu-icon .nav-icon:after {
+    transform: rotate(45deg);
+    top:0;
+}
+/*Title-------------------------------------*/
+.header-title{
+    margin: 7px auto 31px auto;
+    display: block;
+    @include titles-all;
+    font-size: 25px;
+    text-align: center;
+    max-width: 286px;
+    line-height: 33px;
+    .header-title-green{
+        color: $colorTitleGreen;
+    }
+}
+/*Princpial Image---------------------*/
+.header-img{
+    margin: 0 auto;
+    width: 273px;
+    height: 130px;
+}
+/*Search bar-------------------------------------*/
+.header-form{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+.header-form-search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 334px;
+    height: 50px;
+    margin: 0 auto;
+    padding: 0;
+    border: 1px solid $colorTitle;//AQUIIIII
+    border-radius: 27px;
+    .header-form-search-input{
+        @include plain-text;
+        font-size: 16px;
+        border: 0;
+        width: 215px;
+        height: 22px;
+        margin-right: 24px;
+        outline: none;
+        color:$colorPlaceHolder;
+    }
+    button{
+        margin: 0;
+        padding: 0;
+        border: 0;
+        background-color: $colorBckgrd;//AQUIIIII
+        height: 20px;
+        width: 20px;
+    }
+}
+@media screen and (min-width: $tablet){
+    .nav {
+        height: 90px;
+        ul{
+            background-color: $colorBckgrd;//AQUIIIII
+            .btnDesk{
+                margin: 12px 1em 20px 0.5em;
+                border: 1px solid $colorTitle;//AQUIIIII
+                color: $colorTitle;//AQUIIIII
+                background-color: $colorBckgrd;//AQUIIIII
+                border-radius: 50px;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 2.3em;
+                font-weight: bold;
+            }
+            li {
+                float:left;
+                a{
+                    color:$colorTitle;//AQUIIIII
+                    font-size:16px;
+                    padding: 10px 16px;
+                }
+            }   
+        }
+        .menu{
+            height: 90px;
+            margin-top: 0;
+            margin-left: 35%;
+            clear:none;
+            float: right;
+            max-height: none;
+        }
+        .menu-icon{
+            display: none;
+        }
+    }  
+}
+@media screen and (min-width: $desktop){
+    .nav{
+        .logo_nav{
+            img{
+                width: 59.1px;
+                height: 59.1px;
+                margin: 18px 0 12.9px 156px;
+            }
+        }
+        .menu{
+            margin-left: 60%;
+            .btnDesk{
+                margin: 18px 156px 18px 59.5px;
+            }
+            & li a {
+                font-size: 13px;
+                padding: 13px 20px;
+            }
+        }
+    }
+    .header-title{
+        margin: 76px auto 24px auto;
+        font-size: 35px;
+        max-width: 600px;
+        line-height: 50px;
+    }
+    .header-img{
+        width: 399px;
+        height: 190px;
+    }
+    .header-form-search{
+        justify-content: space-around;
+        width: 551px;
+        .header-form-search-input{
+            text-align: left;
+            width: 414px;
+            margin-left: 54px;
+            margin-right: 0;
+            button{
+                margin-right: 20px;
+            }
+        }
+    }
+    
+}

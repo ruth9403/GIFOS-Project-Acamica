@@ -6,30 +6,35 @@
     <meta name="autor" content="Ruth Melissa Jiménez">
     <meta name="Description" content="Inpírate, busca, guarda,y crea los mejores GIFOS ">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel='stylesheet' type='text/css' media='screen' href='css/normalize.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
+    <link rel="stylesheet" href="css/style_gifos_fonts.css">
     <title>GIFOS PROJECT</title>
 </head>
 <body>
     <header class="header">
+        <hr class="header-hr">
         <nav class="nav">
-            <a href="/" class="logo_nav"> <img src="assets/logo-mobile.svg" alt="logo"></a>
+            <a href="/" class="logo_nav"> <img src="assets/logo-mobile.PNG" alt="logo"></a>
             <input class="menu-btn" type="checkbox" id="menu-btn" />
             <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span>
             </label>
             <ul class="menu">
-                <li><a href="" title="Modo Diurno" aria-label="Modo Diurno">Modo Diurno</a></li>
+                <li><a class="theme-mode" href="" title="Modo Nocturno" aria-label="Modo Nocturno">Modo Nocturno</a></li>
                 <li><a href="" title="Favoritos" aria-label="Favoritos">Favoritos</a></li>
                 <li><a href="" title="Mis GIFOS" aria-label="Mis GIFOS">Mis GIFOS</a></li>
+                <li> <div class="btnDesk"> + </div></li>
             </ul>
         </nav>
-        <h1 class="header-title"> Inspírate, busca, guarda y crea los mejores <span>GIFOS</span></h1>
-        <img class="header-img" src="assets/ilustra_header.svg" alt="Imagen Gente sonriendo">
-        <div class="header-box">
-            <label for="header-box-search-input"></label>
-            <input id="header-box-search-input" type="search" placeholder="Busca GIFOS y más">
-            <img src="assets/icon-search.svg" alt="Buscar">
-        </div>
+        <h1 class="header-title"> Inspírate, busca, guarda y crea los mejores <span class="header-title-green">GIFOS</span></h1>
+        <form class="header-form">
+            <img class="header-img" src="assets/ilustra_header.svg" alt="Imagen Gente sonriendo">
+            <label class="header-form-search" for="header-search-input">
+                <input  class="header-form-search-input" id="header-form-search-input" type="search" placeholder="Busca GIFOS y más">
+                <button title="Buscar" class="icon-icon-search"></button>
+            </label>
+        </form>
     </header>
     <section class="categories">
         <h2 class="categories-title">Trending:</h2>
@@ -53,6 +58,15 @@
         <img src="assets/elmo-ejemplo.JPG" alt="gif de resultado">
 
         <button class="search-resuts-btn">Ver más</button>
+    </section>
+    <section class="popup hide" aria-label="https://developers.giphy.com/">
+        <img src="assets/gatomoto-ejemplo.JPG" alt="gif-maximado">
+        <div class="popup-info">
+            <p class="popup-info-username">User</p>
+            <p class="popup-info-gifTitle">Titulo del gifo</p>
+            <img src="assets/icon-fav-hover.svg" alt="añadir favorito">
+            <img src="assets/icon-download.svg" alt="descargar gif">
+        </div>
     </section>
 
     <section class="slider">
