@@ -24,7 +24,7 @@
                 <li><a class="theme-mode" href="" title="Modo Nocturno" aria-label="Modo Nocturno">Modo Nocturno</a></li>
                 <li><a href="" title="Favoritos" aria-label="Favoritos">Favoritos</a></li>
                 <li><a href="" title="Mis GIFOS" aria-label="Mis GIFOS">Mis GIFOS</a></li>
-                <li> <div class="btnDesk"> + </div></li>
+                <li> <button title="Crea tu gifo" class="btnDesk"> + </button></li>
             </ul>
         </nav>
         <h1 class="header-title"> Inspírate, busca, guarda y crea los mejores <span class="header-title-green">GIFOS</span></h1>
@@ -33,6 +33,7 @@
             <label class="header-form-search" for="header-search-input">
                 <input  class="header-form-search-input" id="header-form-search-input" type="search" placeholder="Busca GIFOS y más">
                 <button title="Buscar" class="icon-icon-search"></button>
+                <ul class="header-form-search-sugest"></ul>
             </label>
         </form>
     </header>
@@ -42,22 +43,45 @@
             <a href="">Reactions</a>,  <a href="">Entertainment</a>, <a href="">Sports</a>, <a href="">Stickers</a>, <a href="">Artists</a>
         </p>
     </section>
-    <section class="search-resuts">
-        <h2 class="search-resuts-title">Mascotas</h2>
-        <img src="assets/elmo-ejemplo.JPG" alt="gif de resultado">
-        <img src="assets/elmo-ejemplo.JPG" alt="gif de resultado">
-        <img src="assets/elmo-ejemplo.JPG" alt="gif de resultado">
-        <img src="assets/elmo-ejemplo.JPG" alt="gif de resultado">
-        <img src="assets/elmo-ejemplo.JPG" alt="gif de resultado">
-        <img src="assets/elmo-ejemplo.JPG" alt="gif de resultado">
-        <img src="assets/elmo-ejemplo.JPG" alt="gif de resultado">
-        <img src="assets/elmo-ejemplo.JPG" alt="gif de resultado">
-        <img src="assets/elmo-ejemplo.JPG" alt="gif de resultado">
-        <img src="assets/elmo-ejemplo.JPG" alt="gif de resultado">
-        <img src="assets/elmo-ejemplo.JPG" alt="gif de resultado">
-        <img src="assets/elmo-ejemplo.JPG" alt="gif de resultado">
-
-        <button class="search-resuts-btn">Ver más</button>
+    <section class="search-results hide">
+        <hr class="search-results-hr">
+        <h2 class="search-results-title">Mascotas</h2>
+        <div class="search-results-box">
+            <div class="search-results-box-card">
+                <img class="search-results-box-card-gif" src="assets/elmo-ejemplo.JPG" alt="gif de resultado">
+                <div class="forhover">
+                    <button class="forhover-fav"><span class="icon-icon-fav-hover"></span></button>
+                    <button class="forhover-down"><span class="icon-icon-download"></span></button>
+                    <button class="forhover-max"><span class="icon-icon-max"></span></button>
+                </div>
+            </div>
+            <div class="search-results-box-card">
+                <img class="search-results-box-card-gif" src="assets/elmo-ejemplo.JPG" alt="gif de resultado">
+                <div class="forhover">
+                    <button class="forhover-fav"><span class="icon-icon-fav-hover"></span></button>
+                    <button class="forhover-down"><span class="icon-icon-download"></span></button>
+                    <button class="forhover-max"><span class="icon-icon-max"></span></button>
+                </div>
+            </div>
+            <div class="search-results-box-card">
+                <img class="search-results-box-card-gif" src="assets/elmo-ejemplo.JPG" alt="gif de resultado">
+                <div class="forhover">
+                    <button class="forhover-fav"><span class="icon-icon-fav-hover"></span></button>
+                    <button class="forhover-down"><span class="icon-icon-download"></span></button>
+                    <button class="forhover-max"><span class="icon-icon-max"></span></button>
+                </div>
+            </div>
+            <div class="search-results-box-card">
+                <img class="search-results-box-card-gif" src="assets/elmo-ejemplo.JPG" alt="gif de resultado">
+                <div class="forhover">
+                    <button class="forhover-fav"><span class="icon-icon-fav-hover"></span></button>
+                    <button class="forhover-down"><span class="icon-icon-download"></span></button>
+                    <button class="forhover-max"><span class="icon-icon-max"></span></button>
+                </div>
+            </div>
+            
+        </div>
+        <button class="search-results-btn">Ver más</button>
     </section>
     <section class="popup hide" aria-label="https://developers.giphy.com/">
         <img src="assets/gatomoto-ejemplo.JPG" alt="gif-maximado">

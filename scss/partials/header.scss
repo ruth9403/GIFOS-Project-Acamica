@@ -159,6 +159,7 @@
 }
 .header-form-search{
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     width: 334px;
@@ -167,6 +168,7 @@
     padding: 0;
     border: 1px solid $colorTitle;//AQUIIIII
     border-radius: 27px;
+    position: relative;
     .header-form-search-input{
         @include plain-text;
         font-size: 16px;
@@ -177,6 +179,10 @@
         outline: none;
         color:$colorPlaceHolder;
     }
+    .header-form-search-sugest{
+        width: 100%;
+        display: none;
+    }
     button{
         margin: 0;
         padding: 0;
@@ -186,9 +192,18 @@
         width: 20px;
     }
 }
+/*Media query Tablet--------------------------------------------------*/
 @media screen and (min-width: $tablet){
     .nav {
         height: 90px;
+        .logo_nav{
+            img{
+                width: 59.1px;
+                height: 59.1px;
+                margin: 16px 0 12.9px 156px;
+            }
+        }
+        
         ul{
             background-color: $colorBckgrd;//AQUIIIII
             .btnDesk{
@@ -204,6 +219,10 @@
                 justify-content: center;
                 font-size: 2.3em;
                 font-weight: bold;
+                &:hover{
+                    background-color: $colorTitle;//AQUIIIII
+                    color: $colorBckgrd;//AQUIIIII
+                }
             }
             li {
                 float:left;
@@ -211,6 +230,21 @@
                     color:$colorTitle;//AQUIIIII
                     font-size:16px;
                     padding: 10px 16px;
+                    &:active{
+                        color: $colorPlaceHolder;
+                    }
+                    &:hover{
+                        //text-decoration: underline;
+                        //text-decoration-color: red;
+                        //text-decoration-style: solid;
+                        &::after{
+                            background: $colorTitleGreen;
+                            height: 2px;
+                            bottom: 30px;
+                            width: 80%;
+                            left: 10%;
+                        }
+                    }
                 }
             }   
         }
@@ -218,6 +252,7 @@
             height: 90px;
             margin-top: 0;
             margin-left: 35%;
+            max-width: 65%;
             clear:none;
             float: right;
             max-height: none;
@@ -231,19 +266,25 @@
     .nav{
         .logo_nav{
             img{
-                width: 59.1px;
-                height: 59.1px;
                 margin: 18px 0 12.9px 156px;
             }
         }
         .menu{
-            margin-left: 60%;
+            margin-left: 55%;
+            max-width: 45%;
             .btnDesk{
                 margin: 18px 156px 18px 59.5px;
             }
             & li a {
                 font-size: 13px;
                 padding: 13px 20px;
+                &:hover{
+                    &::after{
+                        bottom: 35px;
+                        width: 73%;
+                        left: 14%;
+                    }
+                }    
             }
         }
     }
@@ -270,5 +311,4 @@
             }
         }
     }
-    
 }

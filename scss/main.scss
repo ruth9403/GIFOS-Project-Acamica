@@ -2,11 +2,13 @@
 @import 'partials/variables.scss';
 @import 'partials/header.scss';
 @import 'partials/categories.scss';
+@import 'partials/search-results.scss';
+@import 'partials/poup.scss';
 
 body{
     padding: 0;
     margin: 0;
-    background-color: #FFFFFF ;
+    background-color: $colorBckgrd ;//AQUIIIII
 }
 
 //@include theme('light-theme')

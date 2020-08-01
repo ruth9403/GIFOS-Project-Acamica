@@ -1,0 +1,49 @@
+.categories{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    .categories-title{
+        @include titles-all;
+        margin-top: 31px;
+        font-size: 16px;
+        margin-bottom:2px;
+    }
+   .categories-paragraph{
+        margin: 0 auto;
+        @include titles-all;
+        display: block;
+        max-width: 225px;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 25px;
+        a{
+            text-decoration: none; 
+            &:visited{
+                color: $colorTitle;//AQUIIIII
+            }
+            &:active{
+                color: $colorPlaceHolder;
+            }
+            &:hover{
+                text-decoration: underline;
+                text-decoration-color: $colorTitleGreen;
+            }
+        } 
+    }
+}
+@media screen and (min-width:$desktop){
+    .categories{
+        .categories-title{
+            margin-top: 73px;
+            font-size: 18px;
+            line-height: 25px;
+            margin-bottom:7px;
+        }
+        .categories-paragraph{
+            font-size: 16px;
+            max-width: 402px;
+            font-weight: 400;
+        }
+    }
+}
+
